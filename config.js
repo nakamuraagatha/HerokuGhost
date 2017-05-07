@@ -52,15 +52,8 @@ config = {
     fileStorage: fileStorage,
     storage: storage,
     database: {
-      client: 'mysql',
-      connection: {
-        host     : process.env.DATABASE_HOST,
-        user     : process.env.DATABASE_USER,
-        password : process.env.DATABASE_PASSWORD,
-        database : process.env.DATABASE_NAME,
-        charset  : 'utf8'
-      },
-      
+      client: 'postgres',
+      connection: process.env.CLEARDB_DATABASE_URL,
       debug: false
     },
     server: {
